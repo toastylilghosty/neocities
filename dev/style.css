@@ -1,19 +1,77 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-
 body {
   background-color: white;
-  color: black;
+  color: white;
   font-family: Verdana;
+  background-image: url('img/pawel-czerwinski-nM7T4zTP3GQ-unsplash.jpg');
 }
 
 .main {
   background-color: lavender;
   margin: auto;
   text-align: center;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-family: "Astloch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header a {
+  text-decoration:none;
+  color: white;
+}
+
+.header h1{
+  font-size: 5rem;
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  font-family: "Glass Antiqua", system-ui;
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 60%;
 }
 
 .container {
-  display: grid;
+  background-color: black;
+  color: white;
+  font-family: "Glass Antiqua", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container p {
+  font-family: 'Merriweather', system-ui;
+}
+
+.sidebar {
+  display: inline-block;
+  /* float: left; */
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+.sidebar a {
+  display: inline;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.sidebar img{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 10pt;
+
 }
