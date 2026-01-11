@@ -4,7 +4,13 @@ permalink: links.html
 title: links
 ---
 
-https://emocowboy.neocities.org/?emo=/home/graphics/blinkies
-https://learn-eleventy.pages.dev/
-https://jamesg.blog/2024/02/19/personal-website-ideas
-https://www.tumblr.com/liminul
+
+<p>a series of links that I found helpful/neat/etc</p>
+
+<div class="links-collection">
+    <h3>graphics</h3>
+    {% assign websites = collections.links | where: "tag", "graphics" %}
+    {% for website in websites %}
+        <a href="{{ website.url }}">{{ website.name }}</a>
+    {% endfor %}
+</div>    

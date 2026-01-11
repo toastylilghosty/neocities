@@ -30,7 +30,7 @@ gallery: buttons
     <div class="gallery">
         {% assign images = collections.galleries | where: "gallery", gallery %}
         {% for image in images %}
-        <!-- considered alt text, but these are mostly decorative tbh (also, clutter) -->
+        <!-- considered alt text, but these are mostly decorative tbh, research and reconsider -->
             <img src="{{ image.path }}" alt="">
         {% endfor %}
     </div>    
