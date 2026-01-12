@@ -6,7 +6,6 @@ body {
 }
 
 .main {
-  background-color: lavender;
   margin: auto;
   text-align: center;
   width: 60%;
@@ -61,6 +60,7 @@ body {
   background-color: black;
   color: white;
   overflow: hidden;
+  background-image: url(img/star_fabric_background.jpg);
 }
 
 .sidebar a {
@@ -109,24 +109,37 @@ body {
 }
 
 .intro {
-  max-width: 100%;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  text-wrap: auto;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    min-width: 0;
+    justify-content: space-around;
 }
 
 .intro img{
-    /* height: 100%; */
     object-fit: contain;
-    width: 50%;
-    /* max-height: 50%; */
-    /* margin-top: 10pt; */
     align-items: center;
     min-width: 0;
+}
+
+/* #intro-background {
+  background-image: url(img/paper-pink.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-clip: content-box;
+} */
+
+.page-title{
+  background-image: url(img/torn_paper_1.webp);
+  background-size: cover;
+}
+
+.page-title h2 {
+  padding: 3rem;
+  color: black;
 }

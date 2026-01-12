@@ -43,8 +43,12 @@
       </div>
 
       <div title="main-content" class="container">
-        <h2> {{ title }} </h2>
-        {{ content | safe }}
+        <div class="page-title">
+          <h2> {{ title }} </h2>
+        </div>
+        <div>
+          {{ content | safe }}
+        </div>
       </div>
 
     </div>
