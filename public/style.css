@@ -52,6 +52,7 @@ body {
 
 .container p {
   font-family: 'Merriweather', system-ui;
+  font-size: small;
 }
 
 .sidebar {
@@ -73,5 +74,50 @@ body {
   max-width: 100%;
   max-height: 100%;
   margin-top: 10pt;
+}
 
+.links-collection a{
+  color: white;
+  font-family: "Merriweather", system-ui;
+  text-align: right;
+}
+
+.links-collection p{
+  color: white;
+  font-family: "Merriweather", system-ui;
+  font-weight: 300;
+  font-size: small;
+}
+
+.links-collection img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  margin-top: 10pt;
+  align-items: center;
+}
+
+.link a{
+  text-align: right;
+}
+
+.link img{
+  object-fit: cover;
+  width: 2%;
+  margin-top: 0pt;
+  align-items: center;
+}
+
+.intro {
+  display: inline-block;
+  text-align: center;
+  text-wrap: auto;
+}
+
+.intro img{
+  object-fit: cover;
+  width: 5%;
+  max-height: 100%;
+  margin-top: 10pt;
+  align-items: center;
 }

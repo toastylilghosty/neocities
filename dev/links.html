@@ -8,9 +8,22 @@ title: links
 <p>a series of links that I found helpful/neat/etc</p>
 
 <div class="links-collection">
-    <h3>graphics</h3>
-    {% assign websites = collections.links | where: "tag", "graphics" %}
-    {% for website in websites %}
-        <a href="{{ website.url }}">{{ website.name }}</a>
+    {% for tag in collections.allTags %}
+    <div class="links">
+        <img src="img/red_divider_1.gif">
+        <h3>{{ tag }}</h3>
+        {% assign websites = collections.links | where: "tag", tag  %}
+        {% for website in websites %}
+        <div class="link">
+            <img src="img/moon.webp">
+            <a href="{{ website.url }}">{{ website.name }}</a>
+            <img src="img/moon.webp" style="  -webkit-transform: scaleX(-1); transform: scaleX(-1);">
+            <br>
+            <p>{{ website.description }}</p>
+            
+        </div>
+        {% endfor %}
+    </div>
     {% endfor %}
+    <img src="img/red_divider_1.gif">
 </div>    

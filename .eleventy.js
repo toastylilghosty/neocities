@@ -25,26 +25,41 @@ export default function(eleventyConfig) {
         return items
     });
 
-    const links = readFileSync(("./dev/websites.csv"),  { encoding: 'utf8', flag: 'r' }, (err, data) => {
-        if (err) throw err;
-        console.log(data);
-        console.log("websites!")
-    });
+
+    let allTags = []
 
     eleventyConfig.addCollection("links", function (collection) {
+        const links = readFileSync(("./dev/websites.csv"),  { encoding: 'utf8', flag: 'r' }, (err, data) => {
+            if (err) throw err;
+            console.log(data);
+            console.log("websites!")
+        }); 
+
         //name, url, tag
         let items = links.split("\n");
 
         let linkCollection = items.map((x) => {
-            let item = x.split(",")
+            let item = x.split(",");
+            let tag = String(item[2]).trim();
+            if(allTags.indexOf(tag) === -1) {
+                allTags.push(tag);
+            }
             return {
                 name: item[0],
                 url: item[1],
-                tag: item[2]
+                tag: tag,
+                description: item[3],
             }
         })
 
         return linkCollection
+    })
+
+    eleventyConfig.addCollection("allTags", function (collection) {
+        if(allTags.includes(undefined)){
+            allTags.pop()
+        }
+        return allTags;
     })
 
     eleventyConfig.addPassthroughCopy("dev/style.css");
