@@ -2,6 +2,26 @@
 layout: base.njk
 permalink: reviews.html
 title: reviews
+pagination:
+    data: collections.posts
+    size: 5
+    alias: posts
 ---
 
 <p>I think I'll put some sort of blog here</p>
+
+<div>
+{% for post in posts %}
+<ul>
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+</ul>
+{% endfor %}
+
+<!-- Pagination links -->
+{% if pagination.href.next %}
+    <a class="contrast" role="button" href="{{ pagination.href.next }}">→</a>
+{% endif %}
+{% if pagination.href.previous %}
+    <a class="contrast" role="button" href="{{ pagination.href.previous }}">←</a>
+{% endif %}
+</div>
